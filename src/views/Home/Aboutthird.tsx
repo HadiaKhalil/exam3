@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import { FaChartLine, FaMoneyBillWave, FaLaptopCode, FaPlane, `` } from "react-icons/fa";
+import { FaChartLine, FaMoneyBillWave, FaLaptopCode, FaPlane  } from "react-icons/fa";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
 import { FaCreativeCommonsBy, FaCreativeCommonsNcEu } from "react-icons/fa";
 
