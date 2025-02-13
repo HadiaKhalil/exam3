@@ -1,9 +1,10 @@
+import React from "react";
 import { FaUsers, FaUserTie, FaEnvelope } from "react-icons/fa";
 
 interface FeatureCardProps {
   title: string;
   description: string;
-  icon: JSX.Element;
+  icon: React.ReactElement; 
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description, icon }) => {
@@ -24,22 +25,22 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-6">
         Lorem <span className="text-gray-400">QuickMart</span>
       </h1>
-      <p className="text-gray-400 mb-10">{`Quality products, unbeatable prices!`}</p>
+      <p className="text-gray-400 mb-10">Quality products, unbeatable prices!</p>
       
       <div className="grid md:grid-cols-3 gap-8 max-w-4xl">
         <FeatureCard 
           title="JOIN OUR TEAM" 
-          description="{`Our friendly support team is always available to assist you with any inquiries`}"
+          description="Our friendly support team is always available to assist you with any inquiries."
           icon={<FaUsers size={30} />} 
         />
         <FeatureCard 
           title="PLATINUM ADVISOR" 
-          description="{`Enjoy quick and hassle-free delivery across the country with real-time tracking.`}" 
+          description="Enjoy quick and hassle-free delivery across the country with real-time tracking." 
           icon={<FaUserTie size={30} />} 
         />
         <FeatureCard 
           title="CONTACT US" 
-          description="{`Explore a vast collection of premium-quality products at the best prices.`}" 
+          description="Explore a vast collection of premium-quality products at the best prices." 
           icon={<FaEnvelope size={30} />} 
         />
       </div>
