@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+
 import { FaChartLine, FaMoneyBillWave, FaLaptopCode, FaPlane, FaQuoteLeft } from "react-icons/fa";
 import { FaHandsHoldingCircle } from "react-icons/fa6";
 import { FaCreativeCommonsBy, FaCreativeCommonsNcEu } from "react-icons/fa";
@@ -16,9 +16,9 @@ const Absec = () => {
 
   return (
     <div className="mx-auto">
-      {/* 🎥 Video Section */}
+  
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        {/* YouTube Video Background */}
+      
         <div className="absolute top-0 left-0 w-full h-full">
           <iframe
             className="w-full h-full"
@@ -30,10 +30,10 @@ const Absec = () => {
           ></iframe>
         </div>
 
-        {/* Overlay for readability */}
+     
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
 
-        {/* Content */}
+    
         <div className="relative z-10 text-center max-w-2xl px-8">
           <h1 className="text-4xl font-extrabold text-white drop-shadow-md">
             If content fuels the web, development is the engine that drives it.
@@ -49,7 +49,7 @@ const Absec = () => {
         </div>
       </section>
 
-      {/* 🌟 Services Section */}
+   
       <section className="bg-gray-100 py-16">
         <h2 className="text-4xl font-bold text-center text-gray-900">Our Services</h2>
         <p className="text-center text-gray-700 mt-2">Providing top-tier web solutions</p>
@@ -64,7 +64,7 @@ const Absec = () => {
         </div>
       </section>
 
-      {/* 💡 Why Choose Us? */}
+  
       <section className="bg-gray-900 text-white py-16">
         <h2 className="text-4xl font-bold text-center">Why Choose Us?</h2>
         <div className="container mx-auto px-6 lg:px-20 grid md:grid-cols-3 gap-6 mt-8">

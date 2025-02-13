@@ -1,4 +1,3 @@
-import { Link } from 'lucide-react';
 import React from 'react';
 import { IoStarSharp } from "react-icons/io5";
 
@@ -6,7 +5,7 @@ const SectionSec = () => {
   return (
     <div 
       className="bg-[#e2eeea] main font-sans bg-cover bg-center bg-blend-overlay" 
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')" }} // Fixed Image URL
+      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')" }} 
     > 
       <div className='container text-black py-10 font-sans'>
         <div className='grid lg:grid-cols-2 gap-6 items-center w-full md:text-start text-center py-4'>

@@ -7,24 +7,24 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "How can I track my order?",
+      question: "{`How can I track my order?`}",
       answer:
-        "Once your order is shipped, you'll receive an email with a tracking link. You can also check your order status in your account dashboard.",
+        "{`Once your order is shipped, you&apos;ll receive an email with a tracking link. You can also check your order status in your account dashboard`}",
     },
     {
-      question: "What payment methods do you accept?",
+      question: "{`What payment methods do you accept?`}",
       answer:
-        "We accept major credit cards, PayPal, Apple Pay, Google Pay, and Klarna for installment payments.",
+        "{`We accept major credit cards, PayPal, Apple Pay, Google Pay, and Klarna for installment payments.`}",
     },
     {
-      question: "What is your return policy?",
+      question: "{`What is your return policy?`}",
       answer:
-        "You can return items within 30 days of purchase. Items must be unused and in original packaging. Start a return request through your account.",
+        "{`You can return items within 30 days of purchase. Items must be unused and in original packaging. Start a return request through your account`}",
     },
     {
-      question: "Do you offer international shipping?",
+      question: "{`Do you offer international shipping?`}",
       answer:
-        "Yes! We ship worldwide. Shipping costs and delivery times vary by location and will be shown at checkout.",
+        "Yes! {`We ship worldwide. Shipping costs and delivery times vary by location and will be shown at checkout.`}",
     },
   ];
 
@@ -73,9 +73,10 @@ const FAQ = () => {
     <div className="flex flex-col md:flex-row items-stretch w-full max-w-6xl mx-auto   bg-opacity-90">
       {/* Left Section */}
       <div className=" text-white p-8 md:w-1/2 justify-center ">
-        <h2 className="text-2xl font-bold mb-4">Let's Start a Project</h2>
+        <h2 className="text-2xl font-bold mb-4">{`Let's Start a Project`}</h2>
         <p className="mb-6 text-gray-300">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+       {`   Lorem ipsum dolor sit amet, consectetur adipiscing 
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
         </p>
         <button className="bg-[#636326] hover:bg-green-300 px-5 py-4 text-white text-[11px] rounded">
           GET A FREE QUOTE
@@ -92,7 +93,7 @@ const FAQ = () => {
       {/* Right Section */}
       <div className="bg-[#272323] text-white p-8 md:w-1/2 flex flex-col justify-center ">
         <h3 className="text-sm uppercase text-gray-400 tracking-[3px] font-bold">Call Us</h3>
-        <p className="text-2xl font-bold my-3">(255) 352-6258</p>
+        <p className="text-2xl font-bold my-3">{`(255) 352-6258`}</p>
 
         <h3 className="text-lg font-semibold mt-6">Subscribe</h3>
         <form className="mt-3">

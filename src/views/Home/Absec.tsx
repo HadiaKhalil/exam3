@@ -32,10 +32,11 @@ const Absec = () => {
         {/* Content */}
         <div className="relative z-10 text-center max-w-2xl px-8">
           <h1 className="text-4xl font-extrabold text-white drop-shadow-md">
-            Empowering Your E-commerce Success!
+          {`  Empowering Your E-commerce Success!`}
           </h1>
           <p className="text-white mt-4 text-lg">
-            Grow your online store with our expert solutions, ensuring seamless shopping experiences, secure payments, and fast delivery.
+          {`  Grow your online store with our expert solutions, ensuring seamless
+             shopping experiences, secure payments, and fast delivery.`}
           </p>
           <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-700 transition shadow-lg">
             Get Started
@@ -45,7 +46,7 @@ const Absec = () => {
 
       {/* 🌟 Services Section */}
       <section className="bg-gray-100 py-16">
-        <h2 className="text-4xl font-bold text-center text-gray-900">Our E-commerce Services</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-900">{`Our E-commerce Services`}</h2>
         <p className="text-center text-gray-700 mt-2">Providing seamless online shopping experiences</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mt-8">
           {services.map((service, index) => (
@@ -60,9 +61,12 @@ const Absec = () => {
 
       {/* 💡 Why Choose Us? */}
       <section className="text-center py-16 px-6">
-        <h2 className="text-4xl font-bold text-gray-900">Why Choose Us?</h2>
+        <h2 className="text-4xl font-bold text-gray-900">{`Why Choose Us?`}</h2>
         <p className="max-w-3xl mx-auto mt-4 text-gray-700 text-lg">
-          We provide cutting-edge e-commerce solutions to help businesses thrive in the digital marketplace. From fast shipping to seamless payment processing, we have it all.
+       {`   We provide cutting-edge e-commerce solutions to help businesses 
+          
+          thrive in the digital marketplace. From fast shipping to seamless
+           payment processing, we have it all`}.
         </p>
         <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600 transition">
           Learn More
@@ -75,13 +79,15 @@ const Absec = () => {
         <div className="flex flex-wrap justify-center mt-6 gap-6">
           <div className="w-72 p-6 bg-gray-100 shadow-lg rounded-lg">
             <FaQuoteLeft className="text-orange-500 text-3xl" />
-            <p className="text-gray-700 mt-2">"Our e-commerce store's revenue doubled thanks to their amazing service!"</p>
-            <p className="text-sm text-gray-500 mt-2">- Jane Doe, Online Store Owner</p>
+            <p className="text-gray-700 mt-2">{`&quot;Our e-commerce store&apos;s revenue doubled thanks to their amazing service!&quot`}</p>
+<p className="text-sm text-gray-500 mt-2">{`- Jane Doe, Online Store Owner`}</p>
           </div>
           <div className="w-72 p-6 bg-gray-100 shadow-lg rounded-lg">
             <FaQuoteLeft className="text-orange-500 text-3xl" />
-            <p className="text-gray-700 mt-2">"Fast delivery and secure payment options made a huge difference!"</p>
-            <p className="text-sm text-gray-500 mt-2">- Mark Johnson, E-commerce Entrepreneur</p>
+            <p className="text-gray-700 mt-2">{`&quot;Fast delivery and secure payment options made a huge difference!&quot`}</p>
+
+
+            <p className="text-sm text-gray-500 mt-2">{`- Mark Johnson, E-commerce Entrepreneur`}</p>
           </div>
         </div>
       </section>
