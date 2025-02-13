@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../Component/Layout/Navbar'
-import AboutHero from '@/views/Home/AboutHero'
+
 import ServiseHero from '@/views/Home/ServiseHero'
 import Serthird from '@/views/Home/Serthird'
 import Forth from '@/views/Home/Forth';

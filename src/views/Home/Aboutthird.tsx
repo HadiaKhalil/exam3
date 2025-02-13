@@ -36,12 +36,12 @@ const Absec = () => {
     
         <div className="relative z-10 text-center max-w-2xl px-8">
           <h1 className="text-4xl font-extrabold text-white drop-shadow-md">
-            If content fuels the web, development is the engine that drives it.
+           {` If content fuels the web, development is the engine that drives it.`}
           </h1>
           <p className="text-white mt-4 text-lg">
-            <span className="font-bold text-orange-400">ISK Contabilidade</span> Radical Web Design is a web design
+         {`   <span className="font-bold text-orange-400">ISK Contabilidade</span> Radical Web Design is a web design
             company based in Manchester. We’ve got years of experience in designing, creating, maintaining, and
-            refreshing websites, which is why we’ve built a portfolio of happy clients.
+            refreshing websites, which is why we’ve built a portfolio of happy clients.`}
           </p>
           <button className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition shadow-lg">
             See More

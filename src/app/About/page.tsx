@@ -1,4 +1,4 @@
-// import AboutHero from '@/views/Home/AboutHero';
+
 import React from 'react';
 import Navbar from '../Component/Layout/Navbar';
 import Footer from '../Component/Layout/Footer';
@@ -14,7 +14,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
- {/* <AboutHero /> */}
+
  <Absec />
 <Aboutthird />
     <Aboutend />
