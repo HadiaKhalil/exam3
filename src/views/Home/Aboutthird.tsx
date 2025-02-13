@@ -51,7 +51,7 @@ const Absec = () => {
 
    
       <section className="bg-gray-100 py-16">
-        <h2 className="text-4xl font-bold text-center text-gray-900">Our Services</h2>
+        <h2 className="text-4xl font-bold text-center text-gray-900">Our Servicess</h2>
         <p className="text-center text-gray-700 mt-2">Providing top-tier web solutions</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto mt-8">
           {services.map((service, index) => (
