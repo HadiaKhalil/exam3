@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaShoppingCart, FaTruck, FaDollarSign, FaUsers } from "react-icons/fa";
+
 
 const Absec = () => {
   return (
