@@ -1,128 +1,75 @@
-import React from 'react';
-import { Brush, ShoppingCart, PenTool, Server, Code, LifeBuoy } from 'lucide-react';
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import { Brush, ShoppingCart, PenTool, Server, Code, LifeBuoy } from "lucide-react";
 import { IoStarSharp } from "react-icons/io5";
-const ServiceSec = () => {
+
+const services = [
+  { title: "Web Design", icon: <Brush size={40} className="text-orange-500" />, desc: "Your website has got to look good, that’s a given. That’s why we strive for the best where quality and user experience is concerned." },
+  { title: "E-commerce", icon: <ShoppingCart size={40} className="text-orange-500" />, desc: "Whether you’re looking to sell to a local, national or international audience, we can help get your products and services noticed." },
+  { title: "Graphic Design", icon: <PenTool size={40} className="text-orange-500" />, desc: "From logos, stationery and print design to social media assets. We’ve been there, done it, and got the t-shirt." },
+  { title: "Web Maintenance", icon: <Server size={40} className="text-orange-500" />, desc: "Ongoing updates from a team who care and understand your business and website. We’re in this for the long haul." },
+  { title: "Web Development", icon: <Code size={40} className="text-orange-500" />, desc: "If content is what fuels the web, then development must be the engine that drives it. Done right, and you shouldn’t even notice it’s there." },
+  { title: "Hosting & Support", icon: <LifeBuoy size={40} className="text-orange-500" />, desc: "Website hosting is available on our dedicated server. High performance and reliability are guaranteed, with 24/7 technical support." },
+];
+
+export default function ServiceSec() {
   return (
-    <div className='container py-12 px-4'>
-    <div className="bg-gray-50  sm:px-6 ">
-      <div className=" mx-auto text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">What we do.</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* Web Design */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <Brush size={40} className="text-blue-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Web Design</h2>
-            <p className="text-gray-600">
-              Your website has got to look good, that’s a given. That’s why we strive for the best where quality and user experience is concerned.
-            </p>
-               <div className='flex items-center py-2 justify-center text-blue-900'>
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                        </div>
-          </div>
+    <motion.section 
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8 }}
+      className="w-full max-w-6xl mx-auto text-center py-16 px-6"
+    >
+      {/* Section Title */}
+      <motion.h2
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-4xl font-bold text-gray-900"
+      >
+        What <span className="text-orange-500">We Do</span>
+      </motion.h2>
+      <p className="text-gray-600 text-sm mt-2">Discover our range of professional services.</p>
 
-          {/* E-commerce */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <ShoppingCart size={40} className="text-green-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">E-commerce</h2>
-            <p className="text-gray-600">
-              Whether you’re looking to sell to a local, national or international audience, we can help get your products and services noticed.
-            </p>
-            <div className='flex items-center py-2 justify-center text-green-900'>
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                        </div>
-          </div>
+      {/* Services Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        {services.map((service, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            className="bg-gray-900 text-white p-6 rounded-xl shadow-lg border border-gray-800 hover:shadow-2xl transition duration-300 transform hover:-translate-y-2"
+          >
+            {/* Icon */}
+            <div className="mx-auto mb-4">{service.icon}</div>
 
-          {/* Graphic Design */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <PenTool size={40} className="text-red-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Graphic Design</h2>
-            <p className="text-gray-600">
-              From logos, stationery and print design to social media assets. We’ve been there, done it to social media and got the t-shirt to social media.
-            </p>
-            <div className='flex items-center py-2 justify-center text-pink-900'>
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                        </div>
-          </div>
+            {/* Title */}
+            <h3 className="text-2xl font-semibold mb-2 text-orange-500">{service.title}</h3>
 
-          {/* Web Maintenance */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <Server size={40} className="text-yellow-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Web Maintenance</h2>
-            <p className="text-gray-600">
-              Ongoing updates from a team who care and understand your business and website. We’re in this for the long haul.
-            </p>
-            <div className='flex items-center py-2 justify-center text-yellow-600'>
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                        </div>
-          </div>
+            {/* Description */}
+            <p className="text-gray-400 text-sm">{service.desc}</p>
 
-          {/* Web Development */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <Code size={40} className="text-purple-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Web Development</h2>
-            <p className="text-gray-600">
-              If content is what fuels the web, then development must be the engine that drives it. Done right and you shouldn’t even notice it is there.
-            </p>
-            <div className='flex items-center py-2 justify-center text-purple-900'>
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                        </div>
-          </div>
-
-          {/* Hosting & Support */}
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <LifeBuoy size={40} className="text-orange-500 mx-auto mb-4" />
-            <h2 className="text-2xl font-semibold text-gray-800 mb-2">Hosting & Support</h2>
-            <p className="text-gray-600">
-              Website hosting is available on our dedicated server with UKFAST. High performance and reliability is guaranteed, with 24/7 technical support.
-            </p>
-            <div className='flex items-center py-2 justify-center text-orange-600'>
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                          <IoStarSharp />
-                        </div>
-          </div>
-        </div>
-
-        {/* Cookies Policy */}
-        <div className="py-8 text-sm text-gray-600">
-          <p>
-            <strong>Cookies policy</strong>  
-            Our website uses cookies to analyse how the site is used and to ensure your experience is consistent between visits. <a href="#" className="text-blue-500 hover:underline">Learn more...</a>
-          </p>
-        </div>
+            {/* Stars */}
+            <div className="flex items-center justify-center py-3 text-orange-500">
+              {[...Array(5)].map((_, i) => (
+                <IoStarSharp key={i} />
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </div>
-    </div>
-  );
-};
 
-export default ServiceSec;
+      {/* Cookies Policy */}
+      <div className="py-8 text-sm text-gray-600">
+        <p>
+          <strong>Cookies policy</strong> - Our website uses cookies to analyze how the site is used and to ensure your experience is consistent between visits.{" "}
+          <a href="#" className="text-orange-500 hover:underline">Learn more...</a>
+        </p>
+      </div>
+    </motion.section>
+  );
+}

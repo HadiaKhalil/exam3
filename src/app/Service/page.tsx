@@ -7,6 +7,7 @@ import Forth from '@/views/Home/Forth';
 import Questionpage from '@/views/Home/Questionpage'
 import Lastservice from '@/views/Home/Lastservice'
 import Footer from '../Component/Layout/Footer'
+import Secondlastservice from '@/views/Home/Secondlastservice';
 
 const page = () => {
   return (
@@ -17,6 +18,7 @@ const page = () => {
       <ServiseHero />
 <Questionpage />
   <Lastservice />
+  <Secondlastservice />
   <Footer />
    
     </div>

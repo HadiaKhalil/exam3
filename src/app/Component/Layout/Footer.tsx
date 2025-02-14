@@ -1,8 +1,19 @@
+"use client"
+import { motion } from "framer-motion";
+
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaYoutube, FaPinterest } from "react-icons/fa"; // Import social media icons
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-export default function Footer() {
+export default function Resume() {
+  const skills = [
+    { name: "FAQ", level: 90 },
+    { name: "Widerruf", level: 80 },
+    { name: "Premiere", level: 70 },
+    { name: "Datenschutz", level: 60 },
+  ];
+  
+
   return (
     <footer className="bg-gray-900 text-gray-300 py-10">
       <div className="max-w-7xl mx-auto px-6">
@@ -77,8 +88,76 @@ export default function Footer() {
                 <Link href="#" className="hover:text-white"><FaPinterest className="sm:h-6 w-6" /></Link>
               </div>
             </div>
+            <section className="  text-white">
+      <div className=" px-6">
+       
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 max-w-[400px]">
+        
+          <div>
+         
+          
+            {skills.map((skill, index) => (
+              <div key={index} className="">
+                <p className="text-sm">{skill.name}</p>
+                <div className=" bg-gray-800  rounded-full mt-1">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1 }}
+                    className="bg-orange-600 h-2 rounded-full"
+                  />
+                </div>
+              </div>
+            ))}
+
+          
+          
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="  text-white">
+      <div className=" px-6">
+       
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 max-w-[400px]">
+        
+          <div>
+         
+          
+            {skills.map((skill, index) => (
+              <div key={index} className="">
+                <p className="text-sm">{skill.name}</p>
+                <div className=" bg-gray-800  rounded-full mt-1">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${skill.level}%` }}
+                    transition={{ duration: 1 }}
+                    className="bg-orange-600 h-2 rounded-full"
+                  />
+                </div>
+              </div>
+            ))}
+
+          
+          
+          
+          </div>
+        </div>
+      </div>
+    </section>
+    <div>
+            <h3 className="md:text-sm text-[12px]  font-semibold uppercase mb-3">Hilfe & Informationen</h3>
+            <ul className="sm:space-y-2 md:text-[17px] text-[10px]">
+              {["FAQ", "Lieferung und Versand", "Rückgabe und Umtausch", "Widerruf", "Datenschutz"].map((link) => (
+                <li key={link}><Link href="#" className="hover:text-white">{link}</Link></li>
+              ))}
+            </ul>
+          </div>
              </div>
-        <div className="grid lg:grid-cols-3 grid-cols-2 sm:gap-16 gap-6 pt-10">
+        <div className="grid lg:grid-cols-3 grid-cols-2 sm:gap-16 gap-6 pt-16">
        <div>
           <h2 className="md:text-xl    font-bold">About Us</h2>
           <p className="text-gray-400 mt-3 md:w-[200px] md:text-[17px] text-[10px]">

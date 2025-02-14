@@ -14,8 +14,9 @@ import Lstcontact from "./Lstcontact";
 const Home = () => {
   return (
     <Layout>
+      <Hero />
 <SecondSec />
-<Hero />
+
 <ServiceSec />
  <Lstcontact />
 <Other />

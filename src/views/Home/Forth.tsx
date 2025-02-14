@@ -1,47 +1,43 @@
-"use client"; 
+"use client";
 
-import React from 'react';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Forth = () => {
   return (
     <div className="mx-auto px-4">
-    
+      {/* Hero Section */}
       <section
         className="relative bg-cover bg-center h-screen flex items-center justify-center text-white text-center"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')", // Online image link
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+            "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
         }}
       >
-        <div className="bg-black container bg-opacity-50 p-10 rounded">
-          <h1 className="text-4xl font-bold">Welcome to Our Store</h1>
-          <p className="mt-4 text-balance">
-          {`  Partner with our experienced team and develop robust software
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="bg-black bg-opacity-50 p-10 rounded shadow-lg"
+        >
+          <h1 className="text-5xl font-extrabold">Welcome to Our Store</h1>
+          <p className="mt-4 text-lg max-w-xl mx-auto">
+            Partner with our experienced team and develop robust software
             applications, whether you’re a start-up or an established business
-            looking to outshine with innovative ideas!`}
+            looking to outshine with innovative ideas!
           </p>
-          <button className="mt-4 bg-orange-500 px-6 py-2 rounded">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="mt-4 bg-orange-500 px-6 py-2 rounded-lg shadow-md text-lg font-semibold"
+          >
             Shop Now
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </section>
 
-  
-      <section className="text-center py-16 bg-white text-black">
-        <h2 className="text-3xl font-bold">Know About Us</h2>
-        <p className="text-black mt-2">Simply dummy text</p>
-        <p className="max-w-3xl mx-auto mt-4">
-       {`   Radical Web Design is a web design company based in Manchester’s
-          vibrant city centre. We’ve got years of experience in designing,
-          creating, maintaining, and refreshing websites, which is why we’ve got
-          a hefty portfolio of happy clients.`}
-        </p>
-        <button className="mt-6 bg-black text-white px-6 py-2 rounded">
-          Read More
-        </button>
-      </section>
+      {/* About Section */}
+
     </div>
   );
 };

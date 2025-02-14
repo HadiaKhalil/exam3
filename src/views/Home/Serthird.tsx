@@ -1,79 +1,119 @@
-// export default function AboutUs() {
-//     return (
-//       <div className="w-full max-w-5xl mx-auto text-center py-12">
-//         <h2 className="text-3xl font-semibold">
-//           Know <span className="text-gray-500">About Us</span>
-//         </h2>
-//         <p className="text-sm text-gray-400">Simply <span className="text-yellow-500">dummy text</span></p>
-  
-//         <p className="mt-4 text-gray-600 px-6 md:px-20">
-//           Lyndon Group is a professional services firm specializing in accounting, finance, IT, governance, 
-//           risk compliance, and travel and expense management projects. Founded in 2001, Lyndon Group only 
-//           employs highly experienced professionals, has a low overhead model, and passes the value onto clients. 
-//           We serve both public and private companies in a wide range of industries.
-//         </p>
-  
-//         <button className="mt-6 px-6 py-2 border border-gray-600 text-gray-700 rounded hover:bg-gray-700 hover:text-white transition">
-//           Read More →
-//         </button>
-//       </div>
-//     );
-//   }
+"use client";
 
+import { motion } from "framer-motion";
+import Image from "next/image";
 
-
-
-
-
-
-
-
-import { FaShoppingCart, FaBox, FaShippingFast, FaHeadset, FaCreditCard, FaChartLine } from "react-icons/fa";
-
-export default function Services() {
-  const services = [
-    { title: "ONLINE STORE SETUP", icon: <FaShoppingCart />, bg: "bg-yellow-400" },
-    { title: "PRODUCT MANAGEMENT", icon: <FaBox />, bg: "bg-gray-800" },
-    { title: "FAST SHIPPING", icon: <FaShippingFast />, bg: "bg-gray-800" },
-    { title: "CUSTOMER SUPPORT", icon: <FaHeadset />, bg: "bg-gray-800" },
-    { title: "PAYMENT SOLUTIONS", icon: <FaCreditCard />, bg: "bg-gray-800" },
-    { title: "MARKETING & ANALYTICS", icon: <FaChartLine />, bg: "bg-gray-800" },
-  ];
-
+export default function ECommerceHomePage() {
   return (
-    <div
-      className="relative bg-cover bg-center text-white py-16 min-h-screen flex flex-col items-center justify-center"
-      style={{
-        backgroundImage:
-          "url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
-      }}
-    >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+    <section className="bg-gray-100">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-12">
+        
+        {/* Header Section */}
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8 }}
+          className="text-3xl font-bold text-center text-gray-800 mb-8"
+        >
+          Featured Products
+        </motion.h2>
 
-      {/* Content */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto text-center py-12">
-        <h2 className="text-3xl font-semibold">E-Commerce Services</h2>
-        <p className="text-sm text-gray-300">Boost your online store with our expert solutions</p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-1 mt-6">
-          {services.map((service, index) => (
-            <div
+        {/* Product Showcase */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            { name: "Smartwatch Pro", img: "/images/1.jpg", price: "$199" },
+            { name: "Wireless Earbuds", img: "/images/2.jpg", price: "$99" },
+          ].map((product, index) => (
+            <motion.div 
               key={index}
-              className={`p-6 ${service.bg} bg-opacity-80 text-white flex flex-col items-center justify-center rounded-lg`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="bg-white p-4 rounded-lg shadow-md"
             >
-              <span className="text-4xl">{service.icon}</span>
-              <h3 className="text-lg font-bold mt-3">{service.title}</h3>
-              <p className="text-sm text-gray-300 mt-2">
-                Professional solutions to optimize your online business.
-              </p>
-            </div>
+              <Image src={product.img} width={300} height={200} alt={product.name} className="rounded-lg" />
+              <h3 className="mt-4 text-lg font-semibold">{product.name}</h3>
+              <p className="text-green-600 font-bold">{product.price}</p>
+              <button className="mt-2 bg-green-600 text-white px-4 py-2 rounded">Add to Cart</button>
+            </motion.div>
+          ))}
+
+          {/* Right Side - Special Offers */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="bg-white p-6 rounded-lg shadow-md"
+          >
+            <h3 className="text-lg font-semibold">Special Offers</h3>
+            <ul className="mt-4 space-y-2">
+              {[
+                { offer: "Buy 1 Get 1 Free - Headphones", valid: "Valid till 20th Feb" },
+                { offer: "50% Off on Smartwatches", valid: "Limited Time Offer" },
+                { offer: "Free Shipping on orders over $50", valid: "All Week" },
+              ].map((deal, index) => (
+                <li key={index} className="flex items-center space-x-3">
+                  <span className="text-green-600 font-semibold">🔥</span>
+                  <div>
+                    <p className="font-medium">{deal.offer}</p>
+                    <p className="text-sm text-gray-500">{deal.valid}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+
+        {/* Info Bar */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-10 bg-green-600 text-white p-4 rounded-lg flex justify-between items-center"
+        >
+          <p>🚚 Free shipping on all orders over $50. Limited time offer!</p>
+          <div className="flex space-x-2">
+            <button className="bg-white text-green-600 px-3 py-1 rounded">←</button>
+            <button className="bg-white text-green-600 px-3 py-1 rounded">→</button>
+          </div>
+        </motion.div>
+
+        {/* Shop by Category */}
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }} 
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl font-bold text-center text-gray-800 my-12"
+        >
+          Shop by Category
+        </motion.h2>
+
+        {/* Category Grid */}
+        <div className="grid md:grid-cols-4 gap-6 text-center">
+          {[
+            { category: "Laptops", img: "/images/9.jpg" },
+            { category: "Smartphones", img: "/images/7.jpg" },
+            { category: "Gaming", img: "/images/8.jpg" },
+            { category: "Accessories", img: "/images/10.jpg" },
+          ].map((item, index) => (
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <Image src={item.img} alt={item.category} width={150} height={150} className="mx-auto rounded" />
+              <h3 className="mt-4 text-lg font-semibold">{item.category}</h3>
+            </motion.div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-
-

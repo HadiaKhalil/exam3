@@ -1,103 +1,139 @@
+"use client";
+
+import React from "react";
 import Image from "next/image";
-// import Link from 'next/link';
-
-import { ArrowRight } from "lucide-react";
-import { Layout, Code, BarChart2, Briefcase } from 'lucide-react';
-
-
+import { motion } from "framer-motion";
+import { ArrowRight, Layout, Code, BarChart2, Briefcase } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className=" text-black bg-white 00 font-sans"> 
-      <div className='container '>
-        <div className='grid lg:grid-cols-2 gap-6 items-center  w-full md:text-start  text-center '>
-        <div className="">
-            <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold max-w-[440px] max-lg:text-[25px]">
-            Investing in Knowledge and <span className="text-orange-700"> Your Future</span>
-            </h1>
-            <h3 className='sm:text-[11px] text-base md:w-[450px] py-4'>
-              {`Radical Web Design is   We’ve got years of experience in designing, creating, maintaining and refreshing websites, which is why we’ve got a hefty portfolio of happy clients
-              Development`}
-            </h3>
-            <div className='flex flex-wrap gap-8 sm:justify-start justify-center items-center'>
-              <div>
-            <button   className='bg-blue-700 text-white  rounded-3xl text-[15px] py-4 px-10 '>
-              contact
-            </button>
-            </div>
-            <div className="grid grid-cols-2 gap-5">
-            <div className="bg-gray-100 p-5 rounded-lg">
-              <h3 className="text-2xl font-semibold text-gray-800 ">50+</h3>
-              <p className="text-gray-600">Cramer Courses</p>
-            </div>
-            <div className="bg-gray-100 p-5 rounded-lg">
-              <h3 className="text-2xl font-semibold text-gray-800 ">1M+</h3>
-              <p className="text-gray-600">Our Students</p>
-            </div>
-          </div>
-            </div>
-            
-          
-          </div>
-          <div className=''>
-            <Image
-              src="/images/eddfcsded.png"
-              alt="XX99 MARK II HEADPHONES"
-              className="object-cover rounded-lg w-full"
-              width={645}
-              height={400}
-            />
-          </div>
-        </div>
-      </div>
-      <div className=" pb-10 pt-2 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8 md:text-start md:w-[300px]">
-          Browse Top Essential Career Courses
-        </h2>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* UI/UX Design */}
-          <div className="bg-pink-400 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <Layout size={40} className="text-blue-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">UI/UX <br></br>Design</h3>
-            
-          </div>
-
-          {/* Web Development */}
-          <div className="bg-purple-400 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <Code size={40} className="text-green-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Web Development</h3>
-          
-          </div>
-
-          {/* Digital Marketing */}
-          <div className="bg-sky-300 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <BarChart2 size={40} className="text-yellow-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Digital Marketing</h3>
-          
-          </div>
-
-          {/* Practical Learning */}
-          <div className="bg-yellow-300 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <Briefcase size={40} className="text-red-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Practical Learning</h3>
-          </div>
-          <div>
-          <button className="mt-8    justify-center items-center gap-2 bg-purple-500 text-white font-semibold py-6 px-6 rounded-full hover:bg-blue-700 transition-colors ">
- 
-  <ArrowRight size={20} />
- 
-</button>
-<h1 className='text-black font-bold py-3'>SEE MORE</h1>
-          </div>
+   <div className="">
+     <div className= "text-black  bg-gradient-to-br from-gray-100 to-white font-sans pt-10">
+     <div className="container mx-auto px-6 lg:px-12">
+      <div className="grid lg:grid-cols-2 gap-10 items-center w-full text-center md:text-start">
         
-        </div>
-    
+        {/* Left Section with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="lg:text-5xl md:text-4xl text-3xl font-extrabold max-w-lg leading-tight">
+            Investing in Knowledge and <span className="text-orange-700"> Your Future</span>
+          </h1>
+          <p className="text-gray-700 md:w-[450px] py-4">
+            {`Radical Web Design has years of experience in designing, creating, maintaining, and refreshing websites. That’s why we have a portfolio full of happy clients.`}
+          </p>
+          <div className="flex flex-wrap gap-6 sm:justify-start justify-center items-center">
+            <motion.button 
+              className="bg-blue-700 text-white rounded-full text-lg py-3 px-8 shadow-md hover:bg-blue-800 transition"
+              whileHover={{ scale: 1.05 }}
+            >
+              Contact
+            </motion.button>
+            <div className="grid grid-cols-2 gap-5">
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <h3 className="text-3xl font-bold text-orange-500">50+</h3>
+                <p className="text-gray-600 text-sm">Cramer Courses</p>
+              </motion.div>
+              <motion.div 
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <h3 className="text-3xl font-bold text-orange-500">1M+</h3>
+                <p className="text-gray-600 text-sm">Our Students</p>
+              </motion.div>
+            </div>
+          </div>
+        </motion.div>
 
+        {/* Right Image Section with Scroll Animation */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          <Image
+            src="/images/eddfcsded.png"
+            alt="Learning"
+            className="rounded-lg shadow-lg"
+            width={645}
+            height={400}
+          />
+        </motion.div>
       </div>
     </div>
+
+      {/* Career Courses Section */}
+      <div className="container pt-20 pb-10 lg:px-12 text-center">
+      {/* Section Heading with Scroll Animation */}
+      <motion.h2
+        className="text-4xl font-bold text-gray-900 mb-12 tracking-wide"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8 }}
+      >
+        Master Your Future with These Courses
+      </motion.h2>
+
+      {/* Course Cards with Scroll Animation */}
+      <motion.div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+      >
+        {[
+          { icon: Layout, title: "UI/UX Design" },
+          { icon: Code, title: "Web Development" },
+          { icon: BarChart2, title: "Digital Marketing" },
+          { icon: Briefcase, title: "Practical Learning" },
+        ].map((item, index) => (
+          <motion.div
+            key={index}
+            className="p-8 rounded-xl bg-white shadow-lg transition-transform transform border border-gray-300"
+            whileHover={{ scale: 1.05 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+          >
+            <item.icon size={50} className="text-orange-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Call to Action Button with Scroll Animation */}
+      <motion.div 
+        className="mt-12 flex justify-center" 
+        whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+      >
+        <button className="flex items-center gap-3 bg-orange-500 text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-orange-600 transition">
+          Explore More <ArrowRight size={22} />
+        </button>
+      </motion.div>
     </div>
+    </div>
+   </div>
   );
 };
 

@@ -7,18 +7,22 @@ import Absec from '@/views/Home/Absec';
 import Abother from '@/views/Home/Abother';
 import Aboutend from '@/views/Home/Aboutend';
 import Aboutthird from '@/views/Home/Aboutthird';
+import Aboutfiv from '@/views/Home/Aboutfiv';
 
 
 
 const Page = () => {
   return (
     <>
+      
       <Navbar />
-
  <Absec />
+ <Abother />
+ <Aboutend />
 <Aboutthird />
-    <Aboutend />
-    <Abother />
+<Aboutfiv />
+   
+   
  
      <Footer />
     </>

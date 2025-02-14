@@ -1,67 +1,128 @@
-import React from 'react';
-import Image from 'next/image';
+"use client";
 
-const servicesData = [
-  {
-    title: "Wide Product Selection",
-    description: "Explore a diverse range of high-quality products, from electronics to fashion, all in one place.",
-    icon: "https://cdn-icons-png.flaticon.com/512/2331/2331970.png",
-  },
-  {
-    title: "Fast & Reliable Shipping",
-    description: "Get your orders delivered quickly with our trusted shipping partners and real-time tracking.",
-    icon: "https://cdn-icons-png.flaticon.com/512/3500/3500833.png",
-  },
-  {
-    title: "Easy & Secure Payments",
-    description: "Shop with confidence using multiple payment options, including credit cards, PayPal, and BNPL.",
-    icon: "https://cdn-icons-png.flaticon.com/512/891/891419.png",
-  },
-  {
-    title: "24/7 Customer Support",
-    description: "Need help? Our support team is available around the clock to assist with any inquiries.",
-    icon: "https://cdn-icons-png.flaticon.com/512/929/929564.png",
-  },
-  {
-    title: "Exclusive Deals & Discounts",
-    description: "Enjoy special offers and discounts on your favorite brands with our loyalty program.",
-    icon: "https://cdn-icons-png.flaticon.com/512/1256/1256650.png",
-  },
-  {
-    title: "Hassle-Free Returns",
-    description: "Not satisfied? Return products easily within 30 days for a full refund or exchange.",
-    icon: "https://cdn-icons-png.flaticon.com/512/709/709612.png",
-  }
-];
+import { motion, useInView } from "framer-motion";
+import Image from "next/image";
+import { useRef } from "react";
 
-export default function Services() {
+export default function ModernDesign() {
+  // Refs for Scroll Animations
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
+
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6 lg:px-20">
-        <h2 className="text-3xl font-bold text-center text-gray-800">OUR SERVICES</h2>
-        <p className="text-center text-gray-600 mt-2">Experience the best in online shopping.</p>
-
-        <div className="grid md:grid-cols-3 gap-8 mt-10">
-          {servicesData.map((service, index) => (
-            <div key={index} className="bg-white shadow-md p-6 rounded-lg flex items-start">
-              <Image 
-                src={service.icon} 
-                alt={service.title} 
-                width={48} 
-                height={48} 
-                className="mr-4" 
+    <section ref={sectionRef} className="py-16 bg-gray-100">
+      <div className="max-w-6xl mx-auto px-6 md:px-12">
+        
+        {/* Main Grid */}
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          
+          {/* Left Side - Images */}
+          <div className="relative grid grid-cols-2 gap-4">
+            {/* Main Image */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8 }}
+              className="col-span-2"
+            >
+              <Image
+                src="/images/6.jpg"
+                alt="Living Room"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-lg w-full"
               />
-              <div>
-                <h3 className="text-lg font-bold text-gray-800">{service.title}</h3>
-                <p className="text-gray-600 text-sm mt-2">{service.description}</p>
-                <a href="#" className="text-blue-600 text-sm mt-2 inline-block">Learn More →</a>
-              </div>
-            </div>
+            </motion.div>
+
+            {/* Small Image 1 */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8 }}
+            >
+              <Image
+                src="/images/2.jpg"
+                alt="Study Room"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-md w-full"
+              />
+            </motion.div>
+
+            {/* Small Image 2 */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8 }}
+            >
+              <Image
+                src="/images/3.jpg"
+                alt="Stool"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-md w-full"
+              />
+            </motion.div>
+          </div>
+
+          {/* Right Side - Text Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1 }}
+            className="text-gray-800"
+          >
+            <h2 className="text-3xl font-bold text-gray-900">
+              We Help You Make Modern Interior Design
+            </h2>
+            <p className="text-gray-600 mt-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae odio quis dolor tristique malesuada.
+            </p>
+
+            {/* Bullet Points */}
+            <ul className="mt-4 space-y-2 text-gray-700">
+              <li>✅ Elegant and modern styles</li>
+              <li>✅ High-quality materials</li>
+              <li>✅ Designed for comfort and aesthetics</li>
+            </ul>
+
+            {/* Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="mt-6 bg-orange-500 text-white py-2 px-6 rounded-lg shadow-md hover:bg-orange-600"
+            >
+              Explore
+            </motion.button>
+          </motion.div>
+        </div>
+
+        {/* Product Section */}
+        <div className="mt-12 grid md:grid-cols-3 gap-6 text-center">
+          {[
+            { name: "Nordic Chair", img: "/images/1.jpg" },
+            { name: "Kruso Aero Chair", img: "/images/5.jpg" },
+            { name: "Ergonomic Chair", img: "/images/4.jpg" },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <Image src={item.img} alt={item.name} width={150} height={150} className="mx-auto" />
+              <h3 className="mt-4 text-lg font-semibold">{item.name}</h3>
+              <p className="text-gray-600 text-sm">
+                Donec facilisis quam ut purus rhoncus bibendum. Donec vitae odio quis.
+              </p>
+              <a href="#" className="text-orange-500 font-semibold mt-2 inline-block">
+                Read More →
+              </a>
+            </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
 }
-
-
