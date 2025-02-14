@@ -42,9 +42,10 @@ export default function AdvantagesSection() {
         >
           <div className="relative w-1/3 h-40">
             <Image 
-              src="/feature1.jpg" 
+              src="/images/11.avif" 
               alt="Feature 1" 
-              layout="fill" 
+              layout="fill"        
+             
               objectFit="cover" 
               priority
             />
@@ -73,7 +74,7 @@ export default function AdvantagesSection() {
           </div>
           <div className="relative w-1/3 h-40">
             <Image 
-              src="/feature2.jpg" 
+              src="/images/image.webp" 
               alt="Feature 2" 
               layout="fill" 
               objectFit="cover" 

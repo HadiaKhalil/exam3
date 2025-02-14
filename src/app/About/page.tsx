@@ -22,8 +22,7 @@ const Page = () => {
  <Aboutend />
 <Aboutthird />
 <Aboutfiv />
-   
-   
+
  <Absecndlst />
      <Footer />
     </>

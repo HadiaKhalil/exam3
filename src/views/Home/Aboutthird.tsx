@@ -100,10 +100,12 @@
 //     icon: <FaCreativeCommonsNcEu className="text-white text-5xl" />,
 //   },
 // ];
+
+
 "use client"
 
-
 import { motion } from "framer-motion";
+import { Brush, Palette, Camera, LayoutGrid } from "lucide-react";
 
 const skills = [
   { name: "Photoshop", percentage: 80 },
@@ -112,10 +114,10 @@ const skills = [
 ];
 
 const skillCards = [
-  { title: "UI/UX Design", icon: "??" },
-  { title: "Graphic Design", icon: "???" },
-  { title: "Motion Design", icon: "??" },
-  { title: "Photo Retouch", icon: "??" },
+  { title: "UI/UX Design", icon: <LayoutGrid size={40} /> },
+  { title: "Graphic Design", icon: <Palette size={40} /> },
+  { title: "Motion Design", icon: <Brush size={40} /> },
+  { title: "Photo Retouch", icon: <Camera size={40} /> },
 ];
 
 export default function DesignSkills() {
@@ -171,7 +173,7 @@ export default function DesignSkills() {
               transition={{ duration: 0.3 }}
               className="bg-white shadow-md rounded-lg p-6 flex flex-col items-center space-y-2 text-center hover:shadow-lg"
             >
-              <div className="text-4xl">{card.icon}</div>
+              <div className="text-gray-900">{card.icon}</div>
               <h3 className="text-gray-900 font-semibold">{card.title}</h3>
             </motion.div>
           ))}

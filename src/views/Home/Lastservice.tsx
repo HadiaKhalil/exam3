@@ -39,9 +39,9 @@ export default function Home() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-4xl font-bold mb-6"
+        className="text-4xl font-bold mb-6 pt-8"
       >
-        Lorem <span className="text-gray-400">QuickMart</span>
+        Lorem <span className="text-gray-400 ">QuickMart</span>
       </motion.h1>
 
       <motion.p 
@@ -49,7 +49,7 @@ export default function Home() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }} 
-        className="text-gray-400 mb-10"
+        className="text-gray-400 "
       >
        {` Quality products, unbeatable prices!`}
       </motion.p>
