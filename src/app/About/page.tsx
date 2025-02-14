@@ -8,6 +8,7 @@ import Abother from '@/views/Home/Abother';
 import Aboutend from '@/views/Home/Aboutend';
 import Aboutthird from '@/views/Home/Aboutthird';
 import Aboutfiv from '@/views/Home/Aboutfiv';
+import Absecndlst from '@/views/Home/Absecndlst';
 
 
 
@@ -23,7 +24,7 @@ const Page = () => {
 <Aboutfiv />
    
    
- 
+ <Absecndlst />
      <Footer />
     </>
   );
