@@ -10,12 +10,12 @@ const FAQ = () => {
     {
       question: "How can I track my order?",
       answer:
-        "Once your order is shipped, you'll receive an email with a tracking link. You can also check your order status in your account dashboard.",
+        "{`Once your order is shipped, you'll receive an email with a tracking link. You can also check your order status in your account dashboard`}",
     },
     {
       question: "What payment methods do you accept?",
       answer:
-        "We accept major credit cards, PayPal, Apple Pay, Google Pay, and Klarna for installment payments.",
+        "We ac{`cept major credit cards, PayPal, Apple Pay, Google Pay, and Klarna for installment payments.`}",
     },
     {
       question: "What is your return policy?",
@@ -25,7 +25,7 @@ const FAQ = () => {
     {
       question: "Do you offer international shipping?",
       answer:
-        "Yes! We ship worldwide. Shipping costs and delivery times vary by location and will be shown at checkout.",
+        "{`Yes!`} We ship worldwide. Shipping costs and delivery times vary by location and will be shown at checkout.",
     },
   ];
 
@@ -108,9 +108,9 @@ const FAQ = () => {
             transition={{ duration: 0.8 }}
             className="bg-gray-900 text-white p-8 md:p-12 rounded-lg flex-1 shadow-lg"
           >
-            <h2 className="text-4xl font-bold mb-4">Let's Start a Project</h2>
+            <h2 className="text-4xl font-bold mb-4">{`Let's Start a Project`}</h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Bring your ideas to life with our expert services. Let's build something amazing together.
+            {`  Bring your ideas to life with our expert services. Let's build something amazing together.`}
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
