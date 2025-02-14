@@ -51,7 +51,7 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.2 }} 
         className="text-gray-400 mb-10"
       >
-        Quality products, unbeatable prices!
+       {` Quality products, unbeatable prices!`}
       </motion.p>
 
       {/* Feature Cards Section */}
@@ -74,7 +74,7 @@ export default function Home() {
         />
         <FeatureCard 
           title="CONTACT US" 
-          description="Explore a vast collection of premium-quality products at the best prices." 
+          description="Explore a vast collection of premiumquality products at the best prices." 
           icon={<FaEnvelope size={30} />} 
         />
       </motion.div>
@@ -100,7 +100,7 @@ export default function Home() {
             </motion.a>
           ))}
         </nav>
-        <p className="mt-4">© 2025 XYZ-GROUP</p>
+        <p className="mt-4">{`© 2025 XYZ-GROUP`}</p>
       </motion.footer>
     </div>
   );

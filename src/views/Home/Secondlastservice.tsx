@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function AdvantagesSection() {
   return (
@@ -25,8 +26,8 @@ export default function AdvantagesSection() {
         transition={{ duration: 0.6 }}
         className="text-gray-400 text-center mb-10"
       >
-        Com mais de 15 anos de experiência no setor de e-commerce, desenvolvemos soluções eficientes para reduzir custos
-        e maximizar resultados, sem exigir investimentos financeiros adicionais.
+        {`Com mais de 15 anos de experiência no setor de e-commerce, desenvolvemos soluções eficientes para reduzir custos
+        e maximizar resultados, sem exigir investimentos financeiros adicionais.`}
       </motion.p>
 
       {/* Features Section */}
@@ -39,11 +40,19 @@ export default function AdvantagesSection() {
           transition={{ duration: 0.6 }}
           className="flex items-center bg-gray-900 rounded-lg overflow-hidden shadow-lg"
         >
-          <img src="/feature1.jpg" alt="Feature 1" className="w-1/3 h-full object-cover" />
+          <div className="relative w-1/3 h-40">
+            <Image 
+              src="/feature1.jpg" 
+              alt="Feature 1" 
+              layout="fill" 
+              objectFit="cover" 
+              priority
+            />
+          </div>
           <div className="p-6 text-white">
             <h3 className="text-xl font-semibold text-orange-500">Tecnologia Avançada</h3>
             <p className="text-gray-400 mt-2">
-              Sistemas 100% integrados com IA para gestão eficiente, reduzindo erros e otimizando processos.
+              {`Sistemas 100% integrados com IA para gestão eficiente, reduzindo erros e otimizando processos.`}
             </p>
           </div>
         </motion.div>
@@ -59,10 +68,18 @@ export default function AdvantagesSection() {
           <div className="p-6 text-gray-900">
             <h3 className="text-xl font-semibold">Suporte Exclusivo</h3>
             <p className="text-gray-800 mt-2">
-              Nossa equipe está sempre disponível para ajudar você a alcançar seus objetivos no e-commerce.
+              {`Nossa equipe está sempre disponível para ajudar você a alcançar seus objetivos no e-commerce.`}
             </p>
           </div>
-          <img src="/feature2.jpg" alt="Feature 2" className="w-1/3 h-full object-cover" />
+          <div className="relative w-1/3 h-40">
+            <Image 
+              src="/feature2.jpg" 
+              alt="Feature 2" 
+              layout="fill" 
+              objectFit="cover" 
+              priority
+            />
+          </div>
         </motion.div>
       </div>
     </div>
