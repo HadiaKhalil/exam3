@@ -8,24 +8,24 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: "How can I track my order?",
+      question: "{`How can I track my order?`}",
       answer:
-        "Once your order is shipped, you'll receive an email with a tracking link. You can also check your order status in your account dashboard.",
+        "{`Once your order is shipped, you'll receive an email with a tracking link. You can also check your order status in your account dashboard`}.",
     },
     {
-      question: "What payment methods do you accept?",
+      question: "{`What payment methods do you accept?`}",
       answer:
-        "We accept major credit cards, PayPal, Apple Pay, Google Pay, and Klarna for installment payments.",
+        "{`We accept major credit cards PayPal, Apple Pay, Google Pay, and Klarna for installment payments.`}",
     },
     {
       question: "What is your return policy?",
       answer:
-        "You can return items within 30 days of purchase. Items must be unused and in original packaging. Start a return request through your account.",
+        "{`You can return items within 30 days of purchase. Items must be unused and in original packaging. Start a return request through your account`}.",
     },
     {
       question: "Do you offer international shipping?",
       answer:
-        "Yes! We ship worldwide. Shipping costs and delivery times vary by location and will be shown at checkout.",
+        "{`Yes! We ship worldwide. Shipping costs and delivery times vary by location and will be shown at checkout.`}",
     },
   ];
 
@@ -116,9 +116,9 @@ const FAQ = () => {
               transition={{ duration: 0.8 }}
               className="bg-gray-900 text-white p-8 md:p-12 rounded-lg flex-1 shadow-lg"
             >
-              <h2 className="text-4xl font-bold mb-4">Let's Start a Project</h2>
+              <h2 className="text-4xl font-bold mb-4">{`Let's Start a Project`}</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Bring your ideas to life with our expert services. Let's build something amazing together.
+                {`Bring your ideas to life with our expert services. Let's build something amazing together.`}
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -152,7 +152,7 @@ const FAQ = () => {
               <h3 className="text-sm uppercase text-gray-400 tracking-widest font-bold">
                 Call Us
               </h3>
-              <p className="text-3xl font-bold my-3 text-green-400">(255) 352-6258</p>
+              <p className="text-3xl font-bold my-3 text-green-400">{`(255) 352-6258`}</p>
 
               <h3 className="text-lg font-semibold mt-6">Subscribe</h3>
               <form className="mt-4">
