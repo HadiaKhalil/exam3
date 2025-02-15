@@ -114,7 +114,7 @@ const skills = [
 ];
 
 const skillCards = [
-  { title: "UI/UX Design", icon: <LayoutGrid size={40} /> },
+  { title: "{`UI/UX Design`}", icon: <LayoutGrid size={40} /> },
   { title: "Graphic Design", icon: <Palette size={40} /> },
   { title: "Motion Design", icon: <Brush size={40} /> },
   { title: "Photo Retouch", icon: <Camera size={40} /> },
@@ -133,7 +133,7 @@ export default function DesignSkills() {
         >
           <h2 className="text-3xl font-bold text-gray-900">What My Design Skills Include</h2>
           <p className="text-gray-600 mt-3">
-            These are the areas where I focus the most in my design workflow.
+            {`These are the areas where I focus the most in my design workflow.`}
           </p>
 
           {/* Progress Bars */}
